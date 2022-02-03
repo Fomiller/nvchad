@@ -12,8 +12,10 @@ M.ui = {
    theme = "onedark",
 }
 
-M.plugins = {
+local userPlugins = require "custom.plugins" -- path to table
 
+M.plugins = {
+    install = userPlugins,
     status = {
         colorizer = true,
         dashboard = true

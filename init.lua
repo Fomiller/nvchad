@@ -2,6 +2,7 @@
 require "custom.mappings"
 require "custom.options"
 require "custom.chadrc"
+require "custom.plugins"
 -- Please check NvChad docs if you're totally new to nvchad + dont know lua!!
 
 -- MAPPINGS
@@ -14,25 +15,25 @@ vim.cmd("set noswapfile")
 vim.cmd("set nobackup")
 
 -- Install plugins
-local customPlugins = require "core.customPlugins"
+-- local customPlugins = require "core.customPlugins"
 
-customPlugins.add(function(use)
-   use {
-      "fatih/vim-go"
-   }
+-- customPlugins.add(function(use)
+--    use {
+--       "fatih/vim-go"
+--    }
    
-   use {
-      "matze/vim-move"
-   }
+--    use {
+--       "matze/vim-move"
+--    }
 
-   use {
-       "BurntSushi/ripgrep"
-   }
+--    use {
+--        "BurntSushi/ripgrep"
+--    }
    
-   use {
-      "williamboman/nvim-lsp-installer"
-   }
-end)
+--    use {
+--       "williamboman/nvim-lsp-installer"
+--    }
+-- end)
 
 -- NOTE: we heavily suggest using Packer's lazy loading (with the 'event','cmd' fields)
 -- see: https://github.com/wbthomason/packer.nvim
