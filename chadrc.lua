@@ -18,7 +18,8 @@ M.plugins = {
     install = userPlugins,
     status = {
         colorizer = true,
-        dashboard = true
+        dashboard = true,
+        snippets = true,
     },
     options = {
         lspconfig = {

@@ -30,7 +30,16 @@ M.setup_lsp = function(attach, capabilities)
            vim.api.nvim_buf_set_keymap(bufnr, "n", "<space>fm", "<cmd>lua vim.lsp.buf.formatting()<CR>", {})
          end
       end
-     
+      
+      if server.name == 'terraformls' then
+        opts.initializationOptions = {
+            experimentalFeatures = {
+                prefillRequiredFields = true
+            }
+        }
+        opts.filetypes = {"terraform", "tf", "hcl"}
+      end
+       
       server:setup(opts)
       vim.cmd [[ do User LspAttachBuffers ]]
    end)

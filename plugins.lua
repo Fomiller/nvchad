@@ -6,4 +6,5 @@ return {
    {"matze/vim-move"},
    {"BurntSushi/ripgrep"},
    {"williamboman/nvim-lsp-installer"},
+   {"tpope/vim-fugitive"}
 }
