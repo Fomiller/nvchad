@@ -37,3 +37,7 @@ M.setup_lsp = function(attach, capabilities)
 end
 
 return M
+-- require("lspconfig").terraformls.setup{
+--     cmd = {DATA_PATH .. "/lspinstall/terraform/terraform-ls", "serve"},
+--     on_attach = require'lsp'.common_on_attach
+-- }

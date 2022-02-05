@@ -3,6 +3,11 @@ local g = vim.g
 
 local options = require("core.utils").load_config().options
 
+-- couldnt find any other way to set these with lua that worked
+vim.cmd("set noswapfile")
+vim.cmd("set nobackup")
+vim.cmd("set nowrap")
+
 opt.title=true
 opt.tabstop=4 
 opt.softtabstop=4
@@ -11,7 +16,6 @@ opt.expandtab=true
 opt.smartindent=true
 opt.autoindent=true
 opt.relativenumber=true
-opt.number=false
 opt.exrc=true
 opt.incsearch=true
 opt.hidden=true
@@ -20,7 +24,6 @@ opt.ignorecase=true
 opt.undofile=true
 opt.scrolloff=8
 opt.cursorline=true
--- opt.undodir="$HOME/.vim/undo"
 opt.signcolumn="yes"
 opt.colorcolumn="80"
 opt.mouse="v"                             
@@ -31,4 +34,3 @@ opt.clipboard="unnamedplus"
 
 g.nohlsearch=true 
 g.noerrorbells=true
-g.nowrap=true
